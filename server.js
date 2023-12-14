@@ -7,12 +7,10 @@ const exphbs = require("express-handlebars");
 const hbs = exphbs.create({ helpers: require("./utils/helpers") });
 
 // Creates express app and sets port
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Setting up session object with cookie, store and secret
-
 const sess = {
     secret: 'secret',
     cookie: {},
@@ -22,3 +20,14 @@ const sess = {
       db: sequelize,
     }),
 };
+
+// Using session middleware with object
+app.use(session(sess));
+
+//Parsing url-encoded data and JSON
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+// Serving static files from public
+app.use(express.static("public"));
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
