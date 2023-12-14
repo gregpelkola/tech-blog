@@ -10,3 +10,15 @@ const hbs = exphbs.create({ helpers: require("./utils/helpers") });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Setting up session object with cookie, store and secret
+
+const sess = {
+    secret: 'secret',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+      db: sequelize,
+    }),
+};
