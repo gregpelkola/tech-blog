@@ -31,3 +31,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
+
+// Seesion middleware with new object
+app.use(
+    session({
+      secret: process.env.SECRET,
+      store: new SequelizeStore({ db: sequelize }),
+      resave: false,
+      saveUninitialized: false,
+    })
+);
+
+// Uses routes from controller
+app.use(routes);
