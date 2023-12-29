@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS --(db name here remove brackets);
-CREATE DATABASE --(db name here remove brackets);
+DROP DATABASE IF EXISTS techblog;
+CREATE DATABASE techblog;
