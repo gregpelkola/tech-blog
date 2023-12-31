@@ -1,7 +1,7 @@
 console.log("Sequelize version:", require('sequelize').version);
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
-const bcryptjs = require('bcrypt.js');
+const bcryptjs = require('bcrypt');
 
 class User extends Model {
     checkPassword(loginPw) {
