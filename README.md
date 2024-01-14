@@ -6,7 +6,7 @@ Provide a short description explaining the what, why, and how of your project. U
 
 - What was your motivation?
 
-To create a webpage where users cna create, and contribute to a tech blog by making an account and creating a post to the blog so other users can interact with the posts.
+To create a webpage where users can create, and contribute to a tech blog by making an account and creating a post to the blog so other users can interact with the posts.
   
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
 
